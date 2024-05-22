@@ -8,47 +8,100 @@
     <br>
     <ul>
 		<li>
+			<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS780%20-%20Computer%20Vision/C++/Project%201/">Bi-Means Gaussian Curve Fitting Automatic Threshold Selection</a>
+			<p>
+				Found the best fitting bi-mean Gaussian curves given a bimodal pixel frequency histogram of a 2-D image (one peak corresponds to background pixels and one 
+				peak is our desired object). The bi-means Gaussian curves that yielded the smallest absolute differences from the pixel histogram were deemed the best
+				fitting. The divide point between the Gaussian curves effectively separates the object peak form the background peak. Applying a thresholding operation
+				with this value can very accurately distinguish object pixels from background pixels when applied to the 2-D image.
+			</p>
+		</li>
+		<li>
+			<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS780%20-%20Computer%20Vision/C++/Project%203/">Morphological Operations</a>
+			<p>
+				Performed 4 fundamental image processing operations known as erosion, dilation, opening, and closing that can be used to remove "salt and pepper" noise
+				from an image as well as extract objects of importance from a 2-D image. Opening which is composed of erosion followed by dilation, extracts the objects
+				and removes "pepper" (background noise). Closing which is composed of dilation followed by erosion, removes "salt" (foreground noise i.e. noise inside of
+				objects). Opening followed by closing can then significantly enhance images which can allow for further image processing.
+			</p>
+		</li>
+		<li>
+			<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS780%20-%20Computer%20Vision/C++/Project%204/">Connected Components</a>
+			<p>
+				Performed connected components object distinguishing.
+				Once object pixels have been distinguished from background pixels using previous image processing operations, objects can be distinguished from each
+				other. An object is considered to consist of all pixels regions that are connected i.e. form "connected components". After several passes over the image,
+				it is determined which "blobs" are connected by at least one object pixel. This can facilitate object counting/characterization.
+			</p>
+		</li>
+		<li>
+			<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS780%20-%20Computer%20Vision/C++/Project%206/">Hough Transform</a>
+			<p>
+				Implemented one form of object feature extraction: line detection. 
+				After edge detection algorithms, the Hough transform can be used to accurately detect lines in the 2-D image. A point in the Hough space is a 
+				tally value of all points in the image space that have the same perpendicular distance from the origin to a line with a certain inclination 
+				angle that passes through the points. More simply put, colinear points all increment the same point in the Hough space so by examining points in
+				the Hough space with high value, we can determine where lines through many colinear points belong in the image.
+			</p>
+		</li>
+		<li>
+			<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS780%20-%20Computer%20Vision/C++/Project%207/">Chain Code</a>
+			<p>
+				Compressed images via boundary pattern analysis. Objects that have no holes can be completely defined by their boundary. A 1-D "chain code" string of 
+				numbers that represent the boundary of such objects can be used to completely define the object in much less storage space than a 2-D image. The method
+				is to find the direction of the next object pixel in a sequence while traveling along the boundary of an object.
+			</p>
+		</li>
+		<li>
 			<a href="https://github.com/sureshyhap/Data-Structures-and-Algorithms-II/tree/master/Second/Project%201">Hash Table</a>
 			<p>
-			  Implemented a hash table used to spell check a document based on a dictionary of valid words inserted into the hash table.
+				Implemented a hash table used to spell check a document based on a dictionary of valid words inserted into the hash table.
 			</p>
-			  </li>
-			  <li>
+		</li>
+		<li>
 			<a href="https://github.com/sureshyhap/Data-Structures-and-Algorithms-II/tree/master/Second/Project%202">Priority Queue</a>
 			<p>
-			  Implemented a priority queue using a binary heap implementation. Uses the previous hash table class to map a string id to a heap node for quick access.
+				Implemented a priority queue using a binary heap implementation. Uses the previous hash table class to map a string id to a heap node for quick access.
 			</p>
-			  </li>
-			  <li>
+		</li>
+		<li>
 			<a href="https://github.com/sureshyhap/Data-Structures-and-Algorithms-II/tree/master/Second/Project%203">Graphs and Dijkstra's Algorithm</a>
 			<p>
-			  Implemented Dijkstra’s algorithm to solve the single source shortest path problem. It finds the path of least cost from a given starting node to all other nodes in the graph. Uses the previous priority queue to quickly access the node with shortest path cost so far. Also uses the hash table class indirectly through the priority queue and directly to reach a given graph node.
+				Implemented Dijkstra’s algorithm to solve the single source shortest path problem. It finds the path of least cost from a given starting node to all other 
+				nodes in the graph. Uses the previous priority queue to quickly access the node with shortest path cost so far. Also uses the hash table class indirectly 
+				through the priority queue and directly to reach a given graph node.
 			</p>
-			  </li>		
-      <li>
-	<a href="https://github.com/sureshyhap/Data-Structures-and-Algorithms-I/blob/master/Second/Project%201/stacks_and_queues.cpp">Stacks and Queues</a>
-	<p>
-	  Implemented Stack and Queue classes from a List class (made by me not std::list) using the major OOP concepts of Encapsulation, Information Hiding, Inheritance, and Polymorphism. My list class was called SimpleList and was an Abstract Base Class. From it I derived several stacks and queues. I used std::list to contain pointers to general SimpleLists that were stacks and queues. By making the functions push and pop virtual, when using the pointers to call push and pop, the correct version was called depending on whether the SimpleList pointer pointed to a stack or a queue.
-	</p>
-      </li>
-      <li>
-	<a href="https://github.com/sureshyhap/Data-Structures-and-Algorithms-I/blob/master/Second/Project%202/fastest_sort.cpp">Fastest Sort</a>
-	<p>
-	  Attempted to make the fastest possible sort for different data sets with different characteristics. The data were people’s last and first names along with social-security numbers. It wasn’t simply the case that Quick Sort would be the fastest for all of them. Knowledge of other sorts and their computational complexities were important. I ended up using Merge Sort for the smallest general data sets of 100,000 people, Quick Sort for data similar to the smallest but with 1,000,000 people, Insertion Sort for data that was close to sorted, and Least-Significant Digit Radix Sort for the final data set where the names didn’t matter and only the social-security numbers were being sorted (they were treated as integers). This shows that even Insertion Sort can have practical application and the linear worst case Big-Oh running time of LSD Radix sort can make it faster than even Quick Sort for sorting integers.
-	</p>
-      </li>
-
-	  <li>
-		<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS316%20-%20Principles%20of%20Programming%20Languages/Project%202/">Pointer Array Manipulation</a>
-		<p>
-			Implemented 2D arrays in both row-major and column-major form using
-			pointers with dynamic memory allocation.
-		</p>
-	  </li>
-	  <li>
-		<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS211%20-%20Object-Oriented-Programming%20in%20C++/">Miscellaneous</a>
-		<p>Assorted programs for Object-Oriented Programming in C++ Class.</p>
-	  </li>
+		</li>		
+      	<li>
+			<a href="https://github.com/sureshyhap/Data-Structures-and-Algorithms-I/blob/master/Second/Project%201/stacks_and_queues.cpp">Stacks and Queues</a>
+			<p>
+	  			Implemented Stack and Queue classes from a List class (made by me not std::list) using the major OOP concepts of Encapsulation, Information Hiding, 
+				Inheritance, and Polymorphism. My list class was called SimpleList and was an Abstract Base Class. From it I derived several stacks and queues. I used 
+				std::list to contain pointers to general SimpleLists that were stacks and queues. By making the functions push and pop virtual, when using the pointers 
+				to call push and pop, the correct version was called depending on whether the SimpleList pointer pointed to a stack or a queue.
+			</p>
+      	</li>
+      	<li>
+			<a href="https://github.com/sureshyhap/Data-Structures-and-Algorithms-I/blob/master/Second/Project%202/fastest_sort.cpp">Fastest Sort</a>
+			<p>
+	  			Attempted to make the fastest possible sort for different data sets with different characteristics. The data were people’s last and first names along with 
+				social-security numbers. It wasn’t simply the case that Quick Sort would be the fastest for all of them. Knowledge of other sorts and their computational 
+				complexities were important. I ended up using Merge Sort for the smallest general data sets of 100,000 people, Quick Sort for data similar to the smallest
+				but with 1,000,000 people, Insertion Sort for data that was close to sorted, and Least-Significant Digit Radix Sort for the final data set where the names 
+				didn’t matter and only the social-security numbers were being sorted (they were treated as integers). This shows that even Insertion Sort can have practical 
+				application and the linear worst case Big-Oh running time of LSD Radix sort can make it faster than even Quick Sort for sorting integers.
+			</p>
+      	</li>
+	  	<li>
+			<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS316%20-%20Principles%20of%20Programming%20Languages/Project%202/">Pointer Array Manipulation</a>
+			<p>
+				Implemented 2D arrays in both row-major and column-major form using pointers with dynamic memory allocation.
+			</p>
+	  	</li>
+	  	<li>
+			<a href="https://gitfront.io/r/user-9213492/MZYtmFg3HQB9/Resume-Projects/tree/CS211%20-%20Object-Oriented-Programming%20in%20C++/">Miscellaneous</a>
+			<p>Assorted programs for Object-Oriented Programming in C++ Class.</p>
+	  	</li>
     </ul>
   </body>
 </html>
